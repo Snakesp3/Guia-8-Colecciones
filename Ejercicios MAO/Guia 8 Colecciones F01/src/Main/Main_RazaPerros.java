@@ -52,6 +52,9 @@ public class Main_RazaPerros {
         } 
         System.out.println(Dog.toString());
         
+        do {
+            
+        } while (found);
         
         
     }
