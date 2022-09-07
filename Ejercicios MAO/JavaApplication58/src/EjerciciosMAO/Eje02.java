@@ -9,8 +9,8 @@ import java.util.HashSet;
 public class Eje02 {
 
     public static void main(String[] args) {
-     
-      //*Toma la Lista, el Conjunto y el Mapa del ejemplo y agrega 5 objetos a cada uno. 
+        
+       //*Toma la Lista, el Conjunto y el Mapa del ejemplo y agrega 5 objetos a cada uno. 
         ArrayList<Integer> listado = new ArrayList();
         int a =20;
         int b =30;
@@ -27,38 +27,32 @@ public class Eje02 {
             System.out.println(aux);
         }
         System.out.println("---------------------");
+       
         HashSet<Integer> numeros = new HashSet();
         Integer a1 = 21;
         Integer b2 = 33;
         Integer c3 = 44;
         Integer d4 = 53;
         Integer e5 = 16;
+       
         numeros.add(a1);
         numeros.add(b2);
         numeros.add(c3);
         numeros.add(d4);
         numeros.add(e5);
-        for (Integer aux1 : numeros) {
-            System.out.println(aux1);
+       for (Integer aux1 : numeros) {
+           System.out.println(aux1);
         }
-        HashMap<Integer, String> personas = new HashMap();
+        System.out.println("----------------------");
+        
+       HashMap<Integer, Alumno> alumno = new HashMap();
         int dni = 32668773;
-        String nombreAlumno = "SebastianG";
-        personas.put(dni, nombreAlumno);
-        int dni = 31668773;
-        String nombreAlumno = "Julio";
-        personas.put(dni, nombreAlumno);
-        int dni = 36668773;
-        String nombreAlumno = "Daniel";
-        personas.put(dni, nombreAlumno);
-        int dni = 33668773;
-        String nombreAlumno = "Joha";
-        personas.put(dni, nombreAlumno);
-        int dni = 35668773;
-        String nombreAlumno = "Diego";
-        personas.put(dni, nombreAlumno);
-         
+        Alumno alumno = new Alumno("Seba");
+      
+    }
+     
+      
         
     }
     
-}
+
