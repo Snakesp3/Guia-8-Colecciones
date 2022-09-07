@@ -1,7 +1,6 @@
 
 package Servicio;
 
-import java.util.ArrayList;
 
 /*
 Diseñar un programa que lea y guarde razas de perros en un ArrayList de tipo String. El
@@ -11,10 +10,7 @@ salir, se mostrará todos los perros guardados en el ArrayList
  */
 public class Servicio_RazaPerros {
     
-    ArrayList<String>raza = new ArrayList();
-    
-    
-    
+  
     
     
     

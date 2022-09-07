@@ -9,32 +9,8 @@ salir, se mostrará todos los perros guardados en el ArrayList
  */
 public class Entidad_RazasPerros {
     
-    public String raza;
-    public String perro;
-
-    public Entidad_RazasPerros() {
-    }
-
-    public Entidad_RazasPerros(String raza, String perro) {
-        this.raza = raza;
-        this.perro = perro;
-    }
-
-    public String getRaza() {
-        return raza;
-    }
-
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
-
-    public String getPerro() {
-        return perro;
-    }
-
-    public void setPerro(String perro) {
-        this.perro = perro;
-    }
+    
+  
     
     
     

@@ -24,40 +24,6 @@ public class NewMain0102 {
 
     public static void main(String[] args) {
         
-        ArrayList<String> Dog = new ArrayList();
-        Scanner Leer = new Scanner(System.in);
         
-        String R = "S"; 
-        
-        do {
-            
-            System.out.println("Ingrese la raza del perro");
-            Dog.add(Leer.next());
-            
-            System.out.println("Desea ingresar otra raza de perro S/N");
-            R = Leer.next();   
-            
-        } while (R.equalsIgnoreCase("S"));   
-        
-        System.out.println(Dog.toString());
-        
-        System.out.println("Ingrese la raza del perro");
-        String Raza = Leer.next();
-        
-        Iterator <String> nombre = Dog.iterator();
-        
-        boolean found=false;
-        while(nombre.hasNext()){
-            
-            if (Raza.equals(nombre.next())) {
-                
-                nombre.remove();
-                found = true;
-            } 
-        }
-        if (!found) {
-            System.out.println("La raza no se encontro");
-        } 
-        System.out.println(Dog.toString());
     }  
 }
