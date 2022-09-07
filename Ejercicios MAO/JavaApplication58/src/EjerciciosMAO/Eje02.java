@@ -47,7 +47,7 @@ public class Eje02 {
         
        HashMap<Integer, Alumno> alumno = new HashMap();
         int dni = 32668773;
-        Alumno alumno = new Alumno("Seba");
+        
       
     }
      
