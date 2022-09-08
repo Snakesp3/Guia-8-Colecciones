@@ -17,12 +17,24 @@ del método se usará la lista notas para calcular el promedio final de alumno. 
 promedio final, devuelto por el método y mostrado en el main.*/
 public class Servicio_alumno {
     
+    
     ArrayList<String>alumno = new ArrayList();
     Scanner leer = new Scanner(System.in);
     
     String pedir = "y";
     
-    
+     public void crearAlumno(){
+         
+         do {  
+             System.out.println("Ingrese el alumno");
+             alumno.add(leer.next());
+             System.out.println("Quiere seguir cargando alumnos?");
+             pedir = leer.next();
+         } while (pedir.equalsIgnoreCase("y"));
+         System.out.println("Los alumnos ingresados son: "+alumno.toString());
+         
+         
+     }
     
     
     

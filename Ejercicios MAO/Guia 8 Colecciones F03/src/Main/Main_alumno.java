@@ -1,6 +1,9 @@
 
 package Main;
 
+import Servicio.Servicio_alumno;
+import java.util.ArrayList;
+
 
 public class Main_alumno {
 
@@ -18,6 +21,9 @@ promedio final, devuelto por el método y mostrado en el main.*/
     public static void main(String[] args) {
        
         
+        Servicio_alumno alu = new Servicio_alumno();
+        
+        alu.crearAlumno();
         
         
         
