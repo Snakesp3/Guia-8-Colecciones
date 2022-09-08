@@ -58,11 +58,5 @@ public class Repaso_Raza {
             System.out.println("no se encontro el maldito can");
         }
         System.out.println("Quedan" + raza.toString());
-    
-    
-    
-    
-    
-    
     }
  }
