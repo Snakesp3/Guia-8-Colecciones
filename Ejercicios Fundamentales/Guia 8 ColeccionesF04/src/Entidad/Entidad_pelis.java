@@ -48,7 +48,7 @@ public class Entidad_pelis {
 
     @Override
     public String toString() {
-        return "***INFO***" + " \nDirector:\n" +"-"+ director + "\nNombre:\n" +"-"+ nombre +  " \nDuracion:\n"  +"H/M-"+ duracion + "";
+        return "***INFO***" + " \nDirector:\n" +"-"+ director + "\nNombre:\n" +"-"+ nombre + " \nDuracion:\n"  +"-"+ duracion + "-";
     }
     
     
