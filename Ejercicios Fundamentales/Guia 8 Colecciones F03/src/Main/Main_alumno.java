@@ -2,12 +2,8 @@
 package Main;
 
 import Servicio.Servicio_alumno;
-import java.util.ArrayList;
 
-
-public class Main_alumno {
-
-   /*Crear una clase llamada Alumno que mantenga información sobre las notas de distintos
+/*Crear una clase llamada Alumno que mantenga información sobre las notas de distintos
 alumnos. La clase Alumno tendrá como atributos, su nombre y una lista de tipo Integer
 con sus 3 notas.
 En el servicio de Alumno deberemos tener un bucle que crea un objeto Alumno. Se pide
@@ -18,18 +14,13 @@ Método notaFinal(): El usuario ingresa el nombre del alumno que quiere calcular
 final y se lo busca en la lista de Alumnos. Si está en la lista, se llama al método. Dentro
 del método se usará la lista notas para calcular el promedio final de alumno. Siendo este
 promedio final, devuelto por el método y mostrado en el main.*/
+public class Main_alumno {
+
+    
     public static void main(String[] args) {
-       
-        
         Servicio_alumno alu = new Servicio_alumno();
         
         alu.crearAlumno();
-        
-        
-        
-        
-        
-        
     }
     
 }
