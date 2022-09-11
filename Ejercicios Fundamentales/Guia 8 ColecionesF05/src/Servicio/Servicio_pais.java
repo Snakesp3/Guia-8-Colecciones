@@ -1,7 +1,8 @@
 package Servicio;
 
 import Entidad.Entidad_pais;
-import java.util.ArrayList;
+
+import java.util.HashSet;
 import java.util.Scanner;
 
 /*Se requiere un programa que lea y guarde países, y para evitar que se ingresen repetidos
@@ -18,7 +19,7 @@ al usuario.
  */
 public class Servicio_pais {
 
-    ArrayList<Entidad_pais> paises = new ArrayList();
+   HashSet<Entidad_pais> paises = new HashSet();
     Scanner leer = new Scanner(System.in);
     Entidad_pais p = new Entidad_pais();
 
