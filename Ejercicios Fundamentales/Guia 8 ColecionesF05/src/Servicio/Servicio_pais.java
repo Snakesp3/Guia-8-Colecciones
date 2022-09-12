@@ -2,8 +2,6 @@ package Servicio;
 
 import Entidad.Entidad_pais;
 
-
-
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -23,7 +21,6 @@ public class Servicio_pais {
 
     /*e requiere un programa que lea y guarde países, y para evitar que se ingresen repetidos
     usaremos un conjunto*/
-    
     HashSet<String> paises = new HashSet();
     Scanner leer = new Scanner(System.in);
     Entidad_pais p = new Entidad_pais();
@@ -31,7 +28,7 @@ public class Servicio_pais {
     public void agregarPaises() {
 
         String ingresar = "s";
-    /*El programa pedirá un país en un bucle, se guardará el país en el
+        /*El programa pedirá un país en un bucle, se guardará el país en el
     conjunto*/
         do {
             System.out.println("Ingrese Paises");
@@ -39,19 +36,16 @@ public class Servicio_pais {
             paises.add(pais);
             System.out.println("Quiere seguir ingresando Paises? S/N");
             ingresar = leer.next();
-    
-    /*después se le preguntará al usuario si quiere guardar otro país o si quiere salir*/
-        
+
+            /*después se le preguntará al usuario si quiere guardar otro país o si quiere salir*/
         } while (ingresar.equalsIgnoreCase("s"));
-        if (ingresar != "s") {
-            System.out.println("Solo puedes ingrese las teclas S/N");
-        }
+
     }
+
     /*si decide salir, se mostrará todos los países guardados en el conjunto. (Recordemos hacer
     los servicios en la clase correspondiente)*/
     public void mostrarpaises() {
-        
-        
+
         for (String paise : paises) {
             System.out.println(paise);
         }

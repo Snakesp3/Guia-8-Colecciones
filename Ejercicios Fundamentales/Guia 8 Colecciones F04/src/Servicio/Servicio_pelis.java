@@ -47,7 +47,7 @@ public class Servicio_pelis {
             System.out.println("Agregamos mas peliculas? (s/n) ");
             seguir = leer.next();
 
-        } while (seguir.equalsIgnoreCase("s"));
+        } while (!seguir.equalsIgnoreCase("n"));
     }
 
     public void mostrarTodasLasPeliculas() {
