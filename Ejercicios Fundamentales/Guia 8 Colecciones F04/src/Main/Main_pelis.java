@@ -52,7 +52,7 @@ public class Main_pelis {
         p1.peliMenorMayor();
         System.out.println("----------------");
         System.out.println("***********************************************");
-        System.out.println("*PELICULAS ORDENADAS POR ORDEN ALFABETICAMENTE*");
+        System.out.println("*PELICULAS ORDENADAS POR TITULO ALFABETICAMENTE*");
         System.out.println("***********************************************");
         p1.ordenarPelisAlfabe();
         System.out.println("----------------");
