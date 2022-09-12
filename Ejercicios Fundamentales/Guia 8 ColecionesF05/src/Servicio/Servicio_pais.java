@@ -33,8 +33,11 @@ public class Servicio_pais {
             paises.add(pais);
             System.out.println("Quiere seguir ingresando Paises? S/N");
             ingresar = leer.next();
-        } while (ingresar.equalsIgnoreCase("s"));
 
+        } while (ingresar.equalsIgnoreCase("s"));
+        if (ingresar != "s") {
+            System.out.println("Solo puedes ingrese las teclas S/N");
+        }
     }
 
     public void mostrarpaises() {
