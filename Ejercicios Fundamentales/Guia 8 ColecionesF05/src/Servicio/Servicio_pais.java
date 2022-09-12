@@ -19,7 +19,7 @@ al usuario.
  */
 public class Servicio_pais {
 
-   HashSet<Entidad_pais> paises = new HashSet();
+    HashSet<String> paises = new HashSet();
     Scanner leer = new Scanner(System.in);
     Entidad_pais p = new Entidad_pais();
 
@@ -29,7 +29,8 @@ public class Servicio_pais {
 
         do {
             System.out.println("Ingrese Paises");
-            p.paises = leer.next();
+            String pais = leer.next();
+            paises.add(pais);
             System.out.println("Quiere seguir ingresando Paises? S/N");
             ingresar = leer.next();
         } while (ingresar.equalsIgnoreCase("s"));
@@ -37,12 +38,10 @@ public class Servicio_pais {
     }
 
     public void mostrarpaises() {
-        
-        for (Entidad_pais paise : paises) {
-            System.out.println(paise.toString());
+
+        for (String paise : paises) {
+            System.out.println(paise);
         }
-        }
-        
 
     }
 
