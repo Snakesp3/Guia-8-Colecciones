@@ -1,4 +1,3 @@
-
 package Main;
 
 import Servicio.Servicio_pais;
@@ -14,24 +13,17 @@ Por último, al usuario se le pedirá un país y se recorrerá el conjunto con u
 buscará el país en el conjunto y si está en el conjunto se eliminará el país que ingresó el
 usuario y se mostrará el conjunto. Si el país no se encuentra en el conjunto se le informará
 al usuario.
-*/
+ */
 public class Main_pais {
 
-   
     public static void main(String[] args) {
-       
+
         Servicio_pais p1 = new Servicio_pais();
-       
-       p1.agregarPaises();
-       p1.mostrarpaises();
-        
-        
-        
-        
-        
-        
-        
+
+        p1.agregarPaises();
+        p1.mostrarpaises();
+        p1.borrarPais();
         
     }
-    
+
 }

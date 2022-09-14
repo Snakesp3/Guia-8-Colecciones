@@ -1,7 +1,7 @@
 package Servicio;
 
 import Entidad.Entidad_pais;
-
+import java.util.Iterator;
 
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -22,10 +22,8 @@ public class Servicio_pais {
 
     /*e requiere un programa que lea y guarde países, y para evitar que se ingresen repetidos
     usaremos un conjunto*/
-    
     TreeSet<String> paisorden = new TreeSet();
     Scanner leer = new Scanner(System.in);
-    
     Entidad_pais p = new Entidad_pais();
 
     public void agregarPaises() {
@@ -47,15 +45,32 @@ public class Servicio_pais {
 
     /*si decide salir, se mostrará todos los países guardados en el conjunto. (Recordemos hacer
     los servicios en la clase correspondiente)*/
-    
     public void mostrarpaises() {
-        
+
         for (String orden : paisorden) {
             System.out.println(orden);
         }
-
-        
-        
     }
 
+    /*Por último, al usuario se le pedirá un país y se recorrerá el conjunto con un Iterator, se
+    buscará el país en el conjunto y si está en el conjunto se eliminará el país que ingresó el
+    usuario y se mostrará el conjunto.*/
+    public void borrarPais() {
+        
+        System.out.println("Ingrese el paise que decea borrar");
+        String borrar1 = leer.next();
+        Iterator borrar = paisorden.iterator();
+        boolean verificar = false;
+        while (borrar.hasNext()) {            
+            if (borrar.next().equals(borrar1)) {
+                borrar.remove();
+                verificar = true;
+            }
+        }
+        
+        
+        
+
+    }
+    
 }
