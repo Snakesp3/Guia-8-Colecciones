@@ -22,8 +22,8 @@ public class Main_pais {
 
         p1.agregarPaises();
         p1.mostrarpaises();
-        p1.borrarPais();
-        
+        System.out.println("----------");    
+        p1.mostrarPaisBorrado();
     }
 
 }

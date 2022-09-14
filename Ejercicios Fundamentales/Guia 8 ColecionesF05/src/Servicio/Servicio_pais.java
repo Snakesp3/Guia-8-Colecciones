@@ -56,21 +56,26 @@ public class Servicio_pais {
     buscará el país en el conjunto y si está en el conjunto se eliminará el país que ingresó el
     usuario y se mostrará el conjunto.*/
     public void borrarPais() {
-        
-        System.out.println("Ingrese el paise que decea borrar");
-        String borrar1 = leer.next();
-        Iterator borrar = paisorden.iterator();
-        boolean verificar = false;
-        while (borrar.hasNext()) {            
-            if (borrar.next().equals(borrar1)) {
-                borrar.remove();
-                verificar = true;
+        Iterator it = paisorden.iterator();
+        System.out.println("Ingrese el Paise que decea eliminar");
+        String borrar = leer.next();
+        boolean verificar = true;
+        while (it.hasNext()) {
+            if (it.next().equals(borrar)) {
+                it.remove();
             }
         }
-        
-        
-        
 
     }
-    
+
+    public void mostrarPaisBorrado() {
+        borrarPais();
+        System.out.println("Paises que van al mundial");
+
+        for (String paises : paisorden) {
+            System.out.println(paises);
+            System.out.println("-------------");
+        }
+
+    }
 }
