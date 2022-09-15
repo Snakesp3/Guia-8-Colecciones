@@ -21,8 +21,9 @@ public class Main_pais {
         Servicio_pais p1 = new Servicio_pais();
 
         p1.agregarPaises();
+        System.out.println("Los paises mencionados son: "); 
         p1.mostrarpaises();
-        System.out.println("----------");    
+        System.out.println("*************************************");  
         p1.mostrarPaisBorrado();
     }
 
