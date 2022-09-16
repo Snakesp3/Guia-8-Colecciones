@@ -2,7 +2,6 @@ package Servicio;
 
 import Entidad.Entidad_pais;
 import java.util.Iterator;
-
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -32,19 +31,20 @@ public class Servicio_pais {
         /*El programa pedirá un país en un bucle, se guardará el país en el
     conjunto*/
         do {
-            System.out.println("******************");
-            System.out.println("*Ingrese el Paise*");
-            System.out.println("******************");
-            System.out.print("-");String pais = leer.next();
+            System.out.println("------------------");
+            System.out.println("|Ingrese el Paise|");
+            System.out.println("------------------");
+            System.out.print("-");
+            String pais = leer.next().toUpperCase();
             paisorden.add(pais);
-            System.out.println("**************************************");
-            System.out.println("*Quiere seguir ingresando Paises? S/N*");
-            System.out.println("**************************************");
+            System.out.println("--------------------------------------");
+            System.out.println("|Quiere seguir ingresando Paises? S/N|");
+            System.out.println("--------------------------------------");
             ingresar = leer.next();
 
             /*después se le preguntará al usuario si quiere guardar otro país o si quiere salir*/
         } while (!ingresar.equalsIgnoreCase("n"));
-        System.out.println("******************************************");
+        System.out.println("======================================");
 
     }
 
@@ -62,42 +62,39 @@ public class Servicio_pais {
     usuario y se mostrará el conjunto.*/
     public void borrarPais() {
         Iterator it = paisorden.iterator();
-        System.out.println("*************************************");
-        System.out.println("*Ingrese el Paise que desea eliminar*");
-        System.out.println("*************************************");
-        System.out.print("-");String borrar = leer.next();
+        System.out.println("-------------------------------------");
+        System.out.println("|Ingrese el Paise que desea eliminar|");
+        System.out.println("-------------------------------------");
+        System.out.print("-");
+        String borrar = leer.next().toUpperCase();
         boolean verificar = true;
         while (it.hasNext()) {
             if (it.next().equals(borrar)) {
                 it.remove();
-                
-            }else{
-               
+
+            } else {
+
             }
-             
         }
-        System.out.println("***********************************");
-        System.out.println("*No se encontro el pais mencionado*");
-        System.out.println("***********************************");
+        System.out.println("-----------------------------------");
+        System.out.println("|No se encontro el pais mencionado|");
+        System.out.println("-----------------------------------");
     }
 
     public void mostrarPaisBorrado() {
         borrarPais();
-        System.out.println("***************************");
-        System.out.println("*Paises que van al Mundial*");
-        System.out.println("***************************");
+        System.out.println("---------------------------");
+        System.out.println("|Paises que van al Mundial|");
+        System.out.println("---------------------------");
 
         for (String paises : paisorden) {
             System.out.println(paises);
-            System.out.println("****************************************");
-            
-            
+            System.out.println("---------------------------------------------");
         }
     }
-    public void noSeEncontroElPais(){
-        
-      
-        
+
+    public void noSeEncontroElPais() {
+
     }
-    
+
 }

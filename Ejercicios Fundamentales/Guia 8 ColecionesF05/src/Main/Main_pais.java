@@ -22,8 +22,9 @@ public class Main_pais {
 
         p1.agregarPaises();
         System.out.println("Los paises mencionados son: "); 
+        System.out.println("======================================");
         p1.mostrarpaises();
-        System.out.println("*************************************");  
+          
         p1.mostrarPaisBorrado();
     }
 
