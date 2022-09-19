@@ -17,7 +17,7 @@ public class Main_tienda {
         Servicio_tienda t1 = new Servicio_tienda();
 
        t1.ingresarProducto();
-       
+       t1.modificarValorproducto();
     }
 
 }
