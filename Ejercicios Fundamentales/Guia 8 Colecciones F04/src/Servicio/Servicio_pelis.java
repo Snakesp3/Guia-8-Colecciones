@@ -34,10 +34,10 @@ public class Servicio_pelis {
         String seguir = "s";
         do {
             System.out.println("Ingrese el Titulo de la Pelicula");
-            String titulo = leer.next();
+            String titulo = leer.next().toUpperCase();
 
             System.out.println("Ingrese el Director de la Pelicula");
-            String director = leer.next();
+            String director = leer.next().toUpperCase();
 
             System.out.println("Ingrese la Duracion de la Pelicula");
             double duracion = leer.nextDouble();

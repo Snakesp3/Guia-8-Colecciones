@@ -75,7 +75,7 @@ public class Servicio_tienda {
     public void modificarValorproducto() {
         
         System.out.println("Elija el producto al que se le modificara su valor");
-         String producto = leer.next();
+         String producto = leer.next().toUpperCase();
         if (t1.containsKey(producto)) {
             System.out.println("Ingrese su nuevo valor");
             int precio = leer.nextInt();
