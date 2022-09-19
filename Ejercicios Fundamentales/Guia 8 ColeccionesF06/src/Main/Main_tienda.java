@@ -1,7 +1,7 @@
-
 package Main;
 
 import Servicio.Servicio_tienda;
+import java.util.Scanner;
 
 /*Se necesita una aplicación para una tienda en la cual queremos almacenar los distintos
 productos que venderemos y el precio que tendrán. Además, se necesita que la
@@ -12,12 +12,12 @@ Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el preci
 Realizar un menú para lograr todas las acciones previamente mencionadas. */
 public class Main_tienda {
 
-  
     public static void main(String[] args) {
-       Servicio_tienda t1 = new Servicio_tienda();
-       
+        Scanner leer = new Scanner(System.in);
+        Servicio_tienda t1 = new Servicio_tienda();
 
-       t1.menu();
+       t1.ingresarProducto();
+       
     }
-    
+
 }
