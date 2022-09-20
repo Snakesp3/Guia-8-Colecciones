@@ -1,23 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Main;
 
 import Servicio.Servicio_tienda;
 import java.util.Scanner;
 
-/*Se necesita una aplicación para una tienda en la cual queremos almacenar los distintos
-productos que venderemos y el precio que tendrán. Además, se necesita que la
-aplicación cuente con las funciones básicas.
-Estas las realizaremos en el servicio. Como, introducir un elemento, modificar su precio,
-eliminar un producto y mostrar los productos que tenemos con su precio (Utilizar
-Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el precio.
-Realizar un menú para lograr todas las acciones previamente mencionadas. */
+/**
+ *
+ * @author Snakesp2
+ */
 public class Main_tienda {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
+
         Scanner leer = new Scanner(System.in);
         Servicio_tienda t1 = new Servicio_tienda();
 
-       t1.ingresarProducto();
-       t1.modificarValorproducto();
-    }
+        int menu;
+        do {
 
+            System.out.println("---Elija las opciones del 1/5---");
+            System.out.println("***Ingresar producto/Precio***");
+            System.out.println("***Modificar valor del producto***");
+            System.out.println("***Eliminar producto de la lista***");
+            System.out.println("***Mostrar productos***");
+            System.out.println("***Salir***");
+            System.out.print("Op-> ");
+            menu = leer.nextInt();
+
+            switch (menu) {
+                case 1:
+                    t1.ingresarProducto();
+                    break;
+                case 2:
+                    t1.modificarValorproducto();
+                    break;
+                case 3:
+                    t1.eliminarProducto();
+                    break;
+                case 4:
+                    t1.mostrar();
+                    break;
+                case 5:
+                    System.out.println("Nos vemos");
+                    break;
+            }
+        } while (menu != 5);
+
+    }
 }

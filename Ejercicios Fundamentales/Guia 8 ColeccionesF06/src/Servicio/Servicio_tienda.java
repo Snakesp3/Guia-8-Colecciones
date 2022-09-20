@@ -1,55 +1,21 @@
+
 package Servicio;
 
 import Entidad.Entidad_tienda;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-/*Se necesita una aplicación para una tienda en la cual queremos almacenar los distintos
-productos que venderemos y el precio que tendrán. Además, se necesita que la
-aplicación cuente con las funciones básicas.
-Estas las realizaremos en el servicio. Como, introducir un elemento, modificar su precio,
-eliminar un producto y mostrar los productos que tenemos con su precio (Utilizar
-Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el precio.
-Realizar un menú para lograr todas las acciones previamente mencionadas. */
+/**
+ *
+ * @author Snakesp2
+ */
 public class Servicio_tienda {
-
+    
     Scanner leer = new Scanner(System.in);
     HashMap< String, Integer> t1 = new HashMap();
-    Entidad_tienda p1 = new Entidad_tienda();
-
-//    //Creamos un menu:
-//    public void menu() {
-//
-//        int m1=0;
-//        do {
-//
-//            System.out.println("1)**Ingresar Producto/Precio**");
-//            System.out.println("2)**Modificar valor del producto**");
-//            System.out.println("3)**Eliminar Producto**");
-//            System.out.println("4)**Mostrar Productos/Precios");
-//            System.out.println("5)**Salir**");
-//            switch (m1) {
-//                case 1:
-//                    ingresarProducto();
-//                    break;
-//                case 2:
-//                    System.out.println("");
-//                    break;
-//                case 3:
-//                    System.out.println("");
-//                    break;
-//                case 4:
-//                    mostrarProducto();
-//                    break;
-//                case 5:
-//                    System.out.println("");
-//                    break;
-//                default:
-//                    throw new AssertionError();
-//            }
-//        } while (m1 != 5);
-//
-//    }
+    Entidad_tienda p1=new Entidad_tienda();
+    
     //Ingresar producros
     public void ingresarProducto() {
 
@@ -67,7 +33,7 @@ public class Servicio_tienda {
             seguir = leer.next().toUpperCase();
 
         } while (seguir.equalsIgnoreCase("s"));
-       
+        mostrar();
 
     }
 
@@ -80,11 +46,35 @@ public class Servicio_tienda {
             int precio = leer.nextInt();
 
             t1.replace(producto, precio);
-             System.out.println("Los Productos son: "+t1.toString());
+            System.out.println("Los Productos son: " + t1.toString());
         } else {
             System.out.println("No se encontro el producto");
             
+
+        }
+    }
+
+    public void mostrar() {
+       // System.out.println(t1);
+        for (Map.Entry<String, Integer> TiendaSeba : t1.entrySet()) {
+//            String key = TiendaSeba.getKey();
+//            Integer value = TiendaSeba.getValue();
+            System.out.println("producto-> " + TiendaSeba.getKey()+"\n"+
+                    "Precio->$ " +TiendaSeba.getValue()+"\n");
+        }
+    }
+      public void eliminarProducto() {
+
+        System.out.println("Elija el producto que desea eliminar");
+        String producto = leer.next().toUpperCase();
+        if (t1.containsKey(producto)) {
            
+            t1.remove(producto);
+            System.out.println("Se elimino el producto: "+producto);
+            
+        } else {
+            System.out.println("No se encontro el producto");
+            
 
         }
     }
