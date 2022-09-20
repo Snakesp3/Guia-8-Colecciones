@@ -50,7 +50,6 @@ public class Servicio_tienda {
 //        } while (m1 != 5);
 //
 //    }
-
     //Ingresar producros
     public void ingresarProducto() {
 
@@ -68,22 +67,25 @@ public class Servicio_tienda {
             seguir = leer.next().toUpperCase();
 
         } while (seguir.equalsIgnoreCase("s"));
-        
+       
 
     }
 
     public void modificarValorproducto() {
-        
+
         System.out.println("Elija el producto al que se le modificara su valor");
-         String producto = leer.next().toUpperCase();
+        String producto = leer.next().toUpperCase();
         if (t1.containsKey(producto)) {
             System.out.println("Ingrese su nuevo valor");
             int precio = leer.nextInt();
-            
+
             t1.replace(producto, precio);
-           }else{
+             System.out.println("Los Productos son: "+t1.toString());
+        } else {
             System.out.println("No se encontro el producto");
+            
+           
+
         }
-        
     }
 }
